@@ -1,0 +1,119 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    background-color: #6200ea;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input, select, textarea, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4500b5;
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Contenedor principal */
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Contenedores laterales */
+#asistentes-container, #comentarios-container {
+    width: 25%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 300px; /* Para asegurar que ambos contenedores sean visibles */
+    overflow-y: auto; /* Permitir scroll si hay muchos elementos */
+}
+
+/* Contenedor central */
+#form-container {
+    width: 45%;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #6200ea;
+    margin-bottom: 15px;
+}
+
+/* Animaciones */
+.nombre-confirmado, .comentario-confirmado {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+    margin-bottom: 10px;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Elementos específicos para los comentarios */
+#comentarios-container .comentario-confirmado {
+    text-align: left;
+    margin-left: 10px;
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#comentarios-container {
+    display: block !important;
+    visibility: visible !important;
+}

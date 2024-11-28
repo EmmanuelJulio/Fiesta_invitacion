@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a mi fiesta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+        <div id="asistentes-container">
+            <h2>Asistentes Confirmados</h2>
+            <div id="confirmados"></div>
+        </div>
+    
+        <div id="form-container">
+            <h1>¡Estás invitado a mi fiesta!</h1>
+            <p>Confirma tu asistencia llenando este formulario:</p>
+            <form id="rsvpForm" onsubmit="event.preventDefault(); insertarDesdeFormulario();">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <input type="text" id="telefono" placeholder="Tu teléfono" required>
+                <input type="time" id="horario" placeholder="Horario estimado de llegada" required>
+                <select id="asistencia" required>
+                    <option value="">¿Asistirás?</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+                <input type="text" id="preferencia" placeholder="Preferencia de comida (opcional)">
+                <textarea id="comentarios" placeholder="Comentarios (opcional)"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="status"></p>
+        </div>
+    
+        <div id="comentarios-container">
+            <h2>Comentarios</h2>
+            <div id="comentarios2"></div>
+        </div>
+    </div>
+    
+    <button id="authorize_button" onclick="handleAuthClick()">Identificate please</button>
+    <button id="signout_button" onclick="handleSignoutClick()">cerrar sesion</button>
+
+
+    <script async defer src="https://apis.google.com/js/api.js" id="gapi"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" id="gis"></script>
+
+    <script async defer src="/js/script.js"></script> 
+    <script async defer src="/js/autentification.js"></script> 
+    <script async defer src="/js/sheet.js"></script> 
+</body>
+</html>
